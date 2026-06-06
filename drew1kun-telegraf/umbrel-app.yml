@@ -1,0 +1,25 @@
+---
+manifestVersion: 1
+id: telegraf
+category: Monitoring
+name: Telegraf
+version: "1.0.0"
+tagline: Host and container metrics collector
+icon: https://raw.githubusercontent.com/influxdata/telegraf/master/assets/GopherAndTiger.png
+description: >-
+  Telegraf collects system and Docker metrics from the Umbrel host,
+  and forwards them to specified InfluxDB instance.
+releaseNotes: ""
+developer: drew1kun
+website: https://umbrel.com
+repo: https://github.com/drew1kun/umbrel-apps
+support: https://github.com/drew1kun/umbrel-apps/issues
+gallery: []
+#  - https://i.imgur.com/yyVG0Jb.jpeg
+#  - https://i.imgur.com/yyVG0Jb.jpeg
+#  - https://i.imgur.com/yyVG0Jb.jpeg
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: drew1kun
