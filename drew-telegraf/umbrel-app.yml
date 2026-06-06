@@ -1,6 +1,6 @@
 ---
 manifestVersion: 1
-id: telegraf
+id: drew-telegraf
 category: Monitoring
 name: Telegraf
 version: "1.0.0"
