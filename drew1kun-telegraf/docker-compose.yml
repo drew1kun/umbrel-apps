@@ -1,0 +1,45 @@
+---
+services:
+  telegraf:
+    build:
+      context: .
+      dockerfile: alpine.Dockerfile
+
+    container_name: telegraf
+    restart: unless-stopped
+
+    networks:
+      - umbrel_main_network
+
+    group_add:
+      - "${DOCKER_GID}"
+
+    volumes:
+      - ${APP_DATA_DIR}/data/config/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ${APP_DATA_DIR}/data/config/telegraf.d:/etc/telegraf/telegraf.d:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /usr/sbin/nvme:/usr/sbin/nvme:ro
+      - /:/hostfs:ro
+
+    env_file:
+      - ${APP_DATA_DIR}/data/.env
+
+    environment:
+      HOST_ETC: /hostfs/etc
+      HOST_PROC: /hostfs/proc
+      HOST_SYS: /hostfs/sys
+      HOST_VAR: /hostfs/var
+      HOST_RUN: /hostfs/run
+      HOST_MOUNT_PREFIX: /hostfs
+      PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+    command:
+      - telegraf
+      - --config
+      - /etc/telegraf/telegraf.conf
+      - --config-directory
+      - /etc/telegraf/telegraf.d
+
+networks:
+  umbrel_main_network:
+    external: true
