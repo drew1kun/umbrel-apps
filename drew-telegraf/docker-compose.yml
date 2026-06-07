@@ -1,10 +1,7 @@
 ---
 services:
   telegraf:
-    #build:
-    #  context: .
-    #  dockerfile: alpine.Dockerfile
-    image: telegraf:1.38.4-alpine@sha256:49fc4b3e60115966979d653e76874bd960acdd27cd484a4a57813132e474d882
+    image: drew1kun/telegraf:1.38.4-alpine@sha256:7019892b6bc289117d61af04e5043bd282ff19f376521312800472189b56060e
 
     container_name: telegraf
     restart: unless-stopped
