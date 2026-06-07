@@ -5,7 +5,7 @@ category: Monitoring
 name: Telegraf
 version: "1.0.0"
 tagline: Host and container metrics collector
-icon: https://raw.githubusercontent.com/influxdata/telegraf/master/assets/GopherAndTiger.png
+icon: https://raw.githubusercontent.com/influxdata/telegraf/master/assets/TelegrafTiger.png
 description: >-
   Telegraf collects system and Docker metrics from the Umbrel host,
   and forwards them to specified InfluxDB instance.
