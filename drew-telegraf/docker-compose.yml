@@ -23,7 +23,7 @@ services:
       - /:/hostfs:ro
 
     env_file:
-      - ${APP_DATA_DIR}/data/.env
+      - ${APP_DATA_DIR}/.env
 
     environment:
       HOST_ETC: /hostfs/etc
