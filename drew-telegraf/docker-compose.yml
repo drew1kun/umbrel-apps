@@ -1,7 +1,7 @@
 ---
 services:
   telegraf:
-    image: drew1kun/telegraf:1.38.4-alpine@sha256:7019892b6bc289117d61af04e5043bd282ff19f376521312800472189b56060e
+    image: drew1kun/telegraf:1.38.4-alpine@sha256:1ddad4c6a0d1ddeaf4a5344f937b29a02b8b21a5ad84fa7c22977f2f1a2cefc7
 
     container_name: telegraf
     restart: unless-stopped
