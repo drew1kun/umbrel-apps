@@ -25,7 +25,7 @@ services:
       HOST_MOUNT_PREFIX: /hostfs
       PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       UMBREL_HOSTNAME: ${UMBREL_HOSTNAME}
-      UMBREL_SEARCH_DOMAIN: ${UMBREL_SEARCH_DOMAIN}
+      UMBREL_SEARCH_DOMAIN: ${UMBREL_SEARCH_DOMAIN:-local}
     command:
       - telegraf
       - --config
