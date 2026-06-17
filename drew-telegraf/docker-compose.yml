@@ -2,13 +2,12 @@
 services:
   telegraf:
     image: drew1kun/telegraf:1.38.4-alpine@sha256:1ddad4c6a0d1ddeaf4a5344f937b29a02b8b21a5ad84fa7c22977f2f1a2cefc7
-    container_name: telegraf
     restart: unless-stopped
     privileged: true
     networks:
       - umbrel_main_network
     group_add:
-      - "${DOCKER_GID}"
+      - ${DOCKER_GID}
     volumes:
       - ${APP_DATA_DIR}/data/config/telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - ${APP_DATA_DIR}/data/config/telegraf.d:/etc/telegraf/telegraf.d:ro
@@ -25,6 +24,8 @@ services:
       HOST_RUN: /hostfs/run
       HOST_MOUNT_PREFIX: /hostfs
       PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      UMBREL_HOSTNAME: ${UMBREL_HOSTNAME}
+      UMBREL_SEARCH_DOMAIN: ${UMBREL_SEARCH_DOMAIN}
     command:
       - telegraf
       - --config
