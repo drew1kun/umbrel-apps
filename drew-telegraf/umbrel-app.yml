@@ -3,7 +3,7 @@ manifestVersion: 1
 id: drew-telegraf
 category: Monitoring
 name: Telegraf
-version: "1.0.1"
+version: "1.0.2"
 tagline: Host and container metrics collector
 icon: https://raw.githubusercontent.com/drew1kun/assets/main/icons/telegraf/512x512/telegraf-umbrel.png
 description: >-
