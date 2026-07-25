@@ -1,0 +1,18 @@
+---
+services:
+  fluent-bit:
+    image: docker.io/drew1kun/fluentbit:5.0.9-distroless@sha256:d5c32a79c0c7ac8905b1a205a071493946bca9d8ead7e562aa1b765297478dae
+    container_name: fluent-bit
+    restart: unless-stopped
+    user: root
+    env_file:
+      - ${APP_DATA_DIR}/.env
+    environment:
+      UMBREL_HOSTNAME: ${UMBREL_HOSTNAME}
+      UMBREL_SEARCH_DOMAIN: ${UMBREL_SEARCH_DOMAIN:-local}
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/fluent-bit/etc:ro
+      - ${APP_DATA_DIR}/storage:/fluent-bit/storage
+      - /var/log/journal:/var/log/journal:ro
+      - /run/log/journal:/run/log/journal:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
