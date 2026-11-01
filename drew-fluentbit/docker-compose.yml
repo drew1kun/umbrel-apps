@@ -1,7 +1,7 @@
 ---
 services:
   fluent-bit:
-    image: docker.io/drew1kun/fluentbit:5.0.9-distroless@sha256:d5c32a79c0c7ac8905b1a205a071493946bca9d8ead7e562aa1b765297478dae
+    image: docker.io/drew1kun/fluentbit:5.1.5-distroless@sha256:3392e52eb4ffb6eff2b2c2913f574acf85a1760609437b8b240fa431d73d64e2
     container_name: fluent-bit
     restart: unless-stopped
     user: root

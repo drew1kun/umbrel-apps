@@ -3,7 +3,7 @@ manifestVersion: 1
 id: drew-fluentbit
 category: Logging
 name: Fluentbit
-version: "5.0.9-distroless"
+version: "5.1.5-distroless"
 tagline: Host and container logs collector
 icon: https://raw.githubusercontent.com/drew1kun/assets/main/icons/fluentbit/512x512/fluentbit.png
 description: >-

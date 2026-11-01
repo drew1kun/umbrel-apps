@@ -1,7 +1,7 @@
 ---
 services:
   telegraf:
-    image: drew1kun/telegraf:1.39.2-alpine@sha256:5b5ad57502c7510b7e9e39b97dfad47f479d165ca852d3b414b181ce7cb85e8d
+    image: drew1kun/telegraf:1.40.2-alpine@sha256:c3c8e015a6cbfd20947ca63efac3eacdf913d03bdb0162be0a4716e8a1e37628
     restart: unless-stopped
     privileged: true
     networks:
